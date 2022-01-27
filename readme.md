@@ -1,3 +1,5 @@
+Testeri punktid näeb: https://ci.itcollege.ee/ci/icd0019/results/danyil
+
 Olulised märkused:
 
 	1)Selleks, et esitada oma kood testerile hindamiseks tuleb teha COMMIT, seejärel IntelliJ-s alt valida GIT. Sealt valida viimane commit ning lisada sellele NEW TAG. 
