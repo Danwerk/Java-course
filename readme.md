@@ -1,0 +1,1 @@
+* intro - EX01 - Java IntelliJ paigaldamine, kompileerimine, bitbucket, õppeaine reeglid
