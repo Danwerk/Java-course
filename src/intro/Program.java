@@ -4,13 +4,12 @@ public class Program {
 
     public static void main(String[] args) {
 
-        int decimal = asDecimal("11001101");
+        int decimal = asDecimal("11111111");
 
         System.out.println(decimal); // 205
 
-        System.out.println(asString(205));
+        System.out.println(asString(10000));
 
-        System.out.println(pow(2, 7));
     }
 
     public static String asString(int input) {
@@ -25,20 +24,28 @@ public class Program {
     }
 
     public static int asDecimal(String input) {
+        input = reverse(input);
         int result = 0;
-        int j = 7;
         for (int i = 0; i < input.length(); i++) {
             if (input.charAt(i) == '1') {
-                result += pow(2, j);
-                j -= 1;
+                result += pow(2, i);
+
             }
-            else {
-                j -= 1;
-            }
+
         }
 
         return result;
     }
+
+    private static String reverse(String input) {
+        String result = "";
+        for (int i = 0; i < input.length(); i++) {
+            result = input.charAt(i) + result;
+
+        }
+        return result;
+    }
+
 
     private static int pow(int arg, int power) {
         // Java has Math.pow() but this time write your own implementation.
