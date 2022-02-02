@@ -34,10 +34,10 @@ public class Code {
 
         int result = 0;
         if (numbers.length == 0) {
-            return 0;
+            return result;
         }
-        for (int i = 0; i < numbers.length; i++) {
-            result += numbers[i];
+        for (int number : numbers) {
+            result += number;
 
         }
         return result;
@@ -87,15 +87,15 @@ public class Code {
         int globalCount = 0;
         String mostCommonChar = "";
         String[] array = input.split("");
-        for (int i = 0; i < array.length; i++) {
+        for (String s : array) {
             int count = 0;
-            for (int j = 0; j < array.length; j++) {
-                if (array[i].equals(array[j])) {
+            for (String value : array) {
+                if (s.equals(value)) {
                     count++;
                 }
                 if (count > globalCount) {
                     globalCount = count;
-                    mostCommonChar = array[i];
+                    mostCommonChar = s;
                 }
 
 
