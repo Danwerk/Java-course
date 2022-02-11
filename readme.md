@@ -1,6 +1,9 @@
 #Testeri punktid näeb: https://ci.itcollege.ee/ci/icd0019/results/danyil
 
-#Lisainfo: Kui tahta käsurealt kompileerida java file, siis tavaks on see, et ühes failis on üks klass(nt. faili nimi A.java, kus A on klass). Kompileeritakse käsuga "javac A.java". 
+#Lisainfo: 1) Kui tahta käsurealt kompileerida java file, siis tavaks on see, et ühes failis on üks klass(nt. faili nimi A.java, kus A on klass). Kompileeritakse käsuga "javac A.java". 
+           2) Kui kompileerida testid, mis asuvad kuskil kataloogis siis kasutada: "javac -classpath <välised teegid> <kompileeritavad failid>". Näiteks: "javac -cp ".;../lib/*" junit\Tests.java". Kompileeritud testide käivitamiseks kasutame käsku: "java -cp ".;../lib/*" org.junit.runner.JUnit
+Core Tests"  
+
 
 #Olulised märkused:
 
@@ -11,3 +14,5 @@
 #Nädalateemad: 
 
 * intro - EX01 - Java IntelliJ paigaldamine, kompileerimine, bitbucket, õppeaine reeglid
+* types - EX02 - Andmetüübid 
+* junit - EX03 - Üksuste testimine
