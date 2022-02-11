@@ -14,5 +14,5 @@ Core Tests"
 #Nädalateemad: 
 
 * intro - EX01 - Java IntelliJ paigaldamine, kompileerimine, bitbucket, õppeaine reeglid
-* types - EX02 - Andmetüübid 
+* types - EX02 - Olulisemad andmestruktuurid ja kontrollstruktuurid
 * junit - EX03 - Üksuste testimine
