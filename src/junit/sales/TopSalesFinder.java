@@ -1,6 +1,6 @@
 package junit.sales;
 
-import java.util.Arrays;
+
 
 
 public class TopSalesFinder {
@@ -80,15 +80,6 @@ public class TopSalesFinder {
             increasedArray[increasedArray.length - 1] = record;
         }
         records = increasedArray;
-    }
-
-
-    @Override
-    public String toString() {
-        return "TopSalesFinder{" +
-                "record=" + record +
-                ", records=" + Arrays.toString(records) +
-                '}';
     }
 }
 
