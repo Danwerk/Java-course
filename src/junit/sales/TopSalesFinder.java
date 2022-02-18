@@ -38,9 +38,9 @@ public class TopSalesFinder {
     }
 
 
-    private int getTotalItemSales(SalesRecord[] SalesRecords, SalesRecord record) {
+    private int getTotalItemSales(SalesRecord[] salesRecords, SalesRecord record) {
         int total = 0;
-        for (SalesRecord salesRecord : SalesRecords) {
+        for (SalesRecord salesRecord : salesRecords) {
             if (salesRecord.getProductId().equals(record.getProductId())){
                 total += salesRecord.getProductPrice() * salesRecord.getItemsSold();
             }
