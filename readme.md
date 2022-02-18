@@ -16,3 +16,4 @@ Core Tests"
 * intro - EX01 - Java IntelliJ paigaldamine, kompileerimine, bitbucket, õppeaine reeglid
 * types - EX02 - Olulisemad andmestruktuurid ja kontrollstruktuurid
 * junit - EX03 - Üksuste testimine
+* oo    - EX04 - Objektid, objektorienteeritud programmeerimine
