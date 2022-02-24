@@ -50,7 +50,7 @@ public class PointSet {
     public PointSet subtract(PointSet other) {
         PointSet subtractedSet = new PointSet();
         for (Point point : set) {
-            if (other.contains(point)) {
+            if (other.contains(point)) {  //võrdleb, kas other arrays olev punkt(point) on olemas ka set arrays.
                 continue;
             } else {
                 subtractedSet.add(point);
