@@ -17,3 +17,5 @@ Core Tests"
 * types - EX02 - Olulisemad andmestruktuurid ja kontrollstruktuurid
 * junit - EX03 - Üksuste testimine
 * oo    - EX04 - Objektid, objektorienteeritud programmeerimine
+* exceptions - EX05 - Erindid
+* inheritance - EX06 - Pärimine, abstraktne klass, alam klass, ülem klass
