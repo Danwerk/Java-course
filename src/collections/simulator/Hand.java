@@ -37,6 +37,11 @@ public class Hand implements Iterable<Card> {
             return HandType.FULL_HOUSE;
         }
 
+        return getHandTypeSubMethod();
+    }
+
+
+    private HandType getHandTypeSubMethod() {
         if (isTrips()) {
             return HandType.TRIPS;
         }
@@ -48,12 +53,12 @@ public class Hand implements Iterable<Card> {
         if (isTwoPair()) {
             return HandType.TWO_PAIRS;
         }
-
         if (isFlush()) {
             return HandType.FLUSH;
         }
 
         return HandType.HIGH_CARD;
+
     }
 
 
@@ -87,8 +92,8 @@ public class Hand implements Iterable<Card> {
                 for (int k = 0; k < cards.size(); k++) {
 
                     if (i != j && i != k && j != k) {
-
-                        if (cards.get(i).getValue() == cards.get(j).getValue() && cards.get(k).getValue() == cards.get(i).getValue()) {
+                        Card.CardValue iValue = cards.get(i).getValue();
+                        if (iValue == cards.get(j).getValue() && cards.get(k).getValue() == iValue) {
                             includesTrips = true;
                         }
                     }
