@@ -87,6 +87,7 @@ public class Hand implements Iterable<Card> {
                 for (int k = 0; k < cards.size(); k++) {
 
                     if (i != j && i != k && j != k) {
+
                         if (cards.get(i).getValue() == cards.get(j).getValue() && cards.get(k).getValue() == cards.get(i).getValue()) {
                             includesTrips = true;
                         }
@@ -189,11 +190,18 @@ public class Hand implements Iterable<Card> {
     private int amountOfPairs() {
         Collections.sort(cards);
         int pairs = 0;
-        for (int i = 1; i < cards.size(); i++) {
+        int i = 1;
+        while (true) {
+            if (i >= cards.size()) {
+                break;
+            }
             if (cards.get(i - 1).getValue() == cards.get(i).getValue()) {
                 pairs += 1;
-                i++;
+                i += 2;
+                continue;
             }
+            i++;
+
         }
         return pairs;
     }
@@ -201,7 +209,7 @@ public class Hand implements Iterable<Card> {
 
     public static void main(String[] args) {
 
-        Hand hand2 = getHand("AAA");
+        Hand hand2 = getHand("AAKK");
         System.out.println(getHand("AAKKA"));
         System.out.println(hand2.isFlush());
 
