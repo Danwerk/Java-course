@@ -58,8 +58,9 @@ public class ShoppingCart<T extends CartItem> {
     public void increaseQuantity(String id) {
         T itemById = null;
         for (T item : cartItems) {
-            if (item.getId().equals(id))
+            if (item.getId().equals(id)) {
                 itemById = item;
+            }
         }
         if (itemById != null) {
             cartItems.add(itemById);
