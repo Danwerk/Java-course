@@ -20,5 +20,5 @@ Core Tests"
 * exceptions - EX05 - Erindid
 * inheritance - EX06 - Pärimine, abstraktne klass, alam klass, ülem klass
 
-Kirjandus lugemiseks:
-*"Coders at work"
+#Kirjandus lugemiseks:
+1. "Coders at work"
