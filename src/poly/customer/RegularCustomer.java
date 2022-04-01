@@ -40,7 +40,7 @@ public final class RegularCustomer extends AbstractCustomer {
 
     @Override
     public int hashCode() {
-        return super.hashCode();
+        return name.hashCode() + id.hashCode();
     }
 
     @Override
