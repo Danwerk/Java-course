@@ -19,6 +19,11 @@ Core Tests"
 * oo    - EX04 - Objektid, objektorienteeritud programmeerimine
 * exceptions - EX05 - Erindid
 * inheritance - EX06 - Pärimine, abstraktne klass, alam klass, ülem klass
+* collections - EX07 - Kollektsioonid, sorteerimine, enum
+* generics - EX08 - geneerilised tüübid, silumine
+* fp - EX09 - funktsionaalne programmeerimine, anonüümsed funktsioonid, stream API
+* poly - EX10 - polümorfism
+* GOF - EX11 - Game of life, Java virtuaalmasin
 
 #Kirjandus lugemiseks:
 1. "Coders at work"
