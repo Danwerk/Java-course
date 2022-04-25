@@ -15,14 +15,14 @@ public class TestRunner {
 
         for (String testClassName : testClassNames) {
 
-            Class<?> clazz = null;
+            Class<?> clazz;
             try {
                 clazz = Class.forName(testClassName);
             } catch (ClassNotFoundException e) {
                 throw new RuntimeException(e);
             }
 //            System.out.println(Arrays.toString(clazz.getDeclaredMethods()));
-            Object instance = null;
+            Object instance;
             try {
                 instance = clazz.getDeclaredConstructor().newInstance();
             } catch (InstantiationException | InvocationTargetException | NoSuchMethodException | IllegalAccessException e) {
