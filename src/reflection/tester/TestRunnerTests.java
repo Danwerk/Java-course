@@ -22,7 +22,7 @@ public class TestRunnerTests {
         try {
             testRunner.runTests(testClassNames);
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            throw new IllegalArgumentException(e);
         }
 
 
