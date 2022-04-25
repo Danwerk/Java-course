@@ -9,6 +9,7 @@ public class TestRunner {
     private List<String> result = new ArrayList<>();
 
     public void runTests(List<String> testClassNames) throws Exception {
+
         for (String testClassName : testClassNames) {
 
             Class<?> clazz = Class.forName(testClassName);

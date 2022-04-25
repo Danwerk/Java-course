@@ -10,5 +10,4 @@ import reflection.tester.TestRunnerTests;
         SerializerTests.class,
         TestRunnerTests.class})
 public class TestSuite {
-
 }

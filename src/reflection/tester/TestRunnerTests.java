@@ -30,7 +30,6 @@ public class TestRunnerTests {
         assertThat(result, containsString("test4() - FAILED"));
         assertThat(result, containsString("test5() - OK"));
         assertThat(result, containsString("test6() - FAILED"));
-
         assertThat(result, not(containsString("helperMethod()")));
 
     }
