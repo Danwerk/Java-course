@@ -21,7 +21,7 @@ public class TestRunnerTests {
         try {
             testRunner.runTests(testClassNames);
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("Failed: " + e);
         }
 
         String result = testRunner.getResult();
