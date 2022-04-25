@@ -48,7 +48,7 @@ public class TestRunner {
 
             }
         }
-        System.out.println(result);
+//        System.out.println(result);
     }
 
     public String getResult() {
