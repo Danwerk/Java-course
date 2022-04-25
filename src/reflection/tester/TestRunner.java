@@ -24,6 +24,7 @@ public class TestRunner {
 
                 Class<? extends Throwable> expected = myTest.expected();
 
+
                 try {
                     method.invoke(instance);
                     if (expected.getSimpleName().equals("None")) {
