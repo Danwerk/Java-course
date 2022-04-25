@@ -1,5 +1,6 @@
 package reflection.tester;
 
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
@@ -8,13 +9,30 @@ public class TestRunner {
 
     private List<String> result = new ArrayList<>();
 
-    public void runTests(List<String> testClassNames) throws Exception {
+    public void runTests(List<String> testClassNames)
+    {
 
         for (String testClassName : testClassNames) {
 
-            Class<?> clazz = Class.forName(testClassName);
+            Class<?> clazz = null;
+            try {
+                clazz = Class.forName(testClassName);
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
 //            System.out.println(Arrays.toString(clazz.getDeclaredMethods()));
-            Object instance = clazz.getDeclaredConstructor().newInstance();
+            Object instance = null;
+            try {
+                instance = clazz.getDeclaredConstructor().newInstance();
+            } catch (InstantiationException e) {
+                e.printStackTrace();
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            } catch (InvocationTargetException e) {
+                e.printStackTrace();
+            } catch (NoSuchMethodException e) {
+                e.printStackTrace();
+            }
 
             for (Method method : clazz.getDeclaredMethods()) {
                 MyTest myTest = method.getAnnotation(MyTest.class);
