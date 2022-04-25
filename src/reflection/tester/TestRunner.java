@@ -9,8 +9,7 @@ public class TestRunner {
 
     private List<String> result = new ArrayList<>();
 
-    public void runTests(List<String> testClassNames)
-    {
+    public void runTests(List<String> testClassNames) {
 
         for (String testClassName : testClassNames) {
 
@@ -18,20 +17,25 @@ public class TestRunner {
             try {
                 clazz = Class.forName(testClassName);
             } catch (ClassNotFoundException e) {
-                e.printStackTrace();
+                throw new RuntimeException(e);
             }
 //            System.out.println(Arrays.toString(clazz.getDeclaredMethods()));
             Object instance = null;
             try {
                 instance = clazz.getDeclaredConstructor().newInstance();
+
             } catch (InstantiationException e) {
-                e.printStackTrace();
+                throw new RuntimeException(e);
+
             } catch (IllegalAccessException e) {
-                e.printStackTrace();
+                throw new RuntimeException(e);
+
             } catch (InvocationTargetException e) {
-                e.printStackTrace();
+                throw new RuntimeException(e);
+
             } catch (NoSuchMethodException e) {
-                e.printStackTrace();
+                throw new RuntimeException(e);
+
             }
 
             for (Method method : clazz.getDeclaredMethods()) {
