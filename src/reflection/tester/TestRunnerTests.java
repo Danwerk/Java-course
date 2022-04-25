@@ -10,6 +10,7 @@ import static org.junit.Assert.assertThat;
 
 public class TestRunnerTests {
 
+
     @Test
     public void runsTestsFromDecoupledFiles() {
 
@@ -18,7 +19,11 @@ public class TestRunnerTests {
 
         TestRunner testRunner = new TestRunner();
 
-        testRunner.runTests(testClassNames);
+        try {
+            testRunner.runTests(testClassNames);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
 
 
         String result = testRunner.getResult();
