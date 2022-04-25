@@ -11,7 +11,6 @@ public class TestRunner {
     public void runTests(List<String> testClassNames) throws Exception {
         for (String testClassName : testClassNames) {
 
-
             Class<?> clazz = Class.forName(testClassName);
 //            System.out.println(Arrays.toString(clazz.getDeclaredMethods()));
             Object instance = clazz.getDeclaredConstructor().newInstance();

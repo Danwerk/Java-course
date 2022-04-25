@@ -11,18 +11,16 @@ import static org.junit.Assert.assertThat;
 public class TestRunnerTests {
 
     @Test
-    public void runsTestsFromDecoupledFiles() {
+    public void runsTestsFromDecoupledFiles() throws Exception{
 
         List<String> testClassNames = List.of(
                 "reflection.tester.ExampleTests1", "reflection.tester.ExampleTests2");
 
         TestRunner testRunner = new TestRunner();
 
-        try {
-            testRunner.runTests(testClassNames);
-        } catch (Exception e) {
-            System.out.println("Failed: " + e);
-        }
+
+        testRunner.runTests(testClassNames);
+
 
         String result = testRunner.getResult();
 
