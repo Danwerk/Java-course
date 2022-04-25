@@ -22,7 +22,7 @@ public class TestRunnerTests {
         try {
             testRunner.runTests(testClassNames);
         } catch (Exception e) {
-            System.out.println("BAD");
+            throw new RuntimeException(e);
         }
 
 
