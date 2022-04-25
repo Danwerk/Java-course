@@ -4,12 +4,23 @@ import java.util.List;
 
 public class ConnectionFinder {
 
+    private String[][] connects;
+
+//    [[a,b], []]
+
     public void addAll(List<Connection> connections) {
         throw new RuntimeException("not implemented yet");
     }
 
     public void add(Connection connection) {
-        throw new RuntimeException("not implemented yet");
+        for (String[] connect : connects) {
+            for (String s : connect) {
+            if (s.equals(connection.getFrom())) {
+
+            }
+            }
+        }
+        System.out.println(connection.getFrom());
     }
 
     public boolean hasConnection(String a, String b) {
@@ -20,3 +31,9 @@ public class ConnectionFinder {
         throw new RuntimeException("not implemented yet");
     }
 }
+
+
+
+//{a -> b
+// b -> c
+//

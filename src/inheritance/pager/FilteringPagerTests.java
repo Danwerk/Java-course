@@ -37,6 +37,7 @@ public class FilteringPagerTests {
                 null, 3, 4);
 
         SimplePager simplePager = new SimplePager(data, 4);
+        System.out.println(simplePager.getPage(0));
         FilteringPager pager = new FilteringPager(simplePager, 2);
 
         assertThat(pager.getNextPage(), contains(1, 2));

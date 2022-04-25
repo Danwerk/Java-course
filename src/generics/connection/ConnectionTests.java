@@ -16,7 +16,7 @@ public class ConnectionTests {
 
         var finder = new ConnectionFinder();
 
-        finder.add(new Connection("a", "b"));
+        finder.add(new Connection("a", "b"));    //a-b, b-c, a-c
 
         assertTrue(finder.hasConnection("a", "b"));
         assertTrue(finder.hasConnection("b", "a"));
