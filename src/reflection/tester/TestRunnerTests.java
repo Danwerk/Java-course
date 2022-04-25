@@ -18,8 +18,12 @@ public class TestRunnerTests {
 
         TestRunner testRunner = new TestRunner();
 
-
+        try {
         testRunner.runTests(testClassNames);
+
+        } catch (Exception e) {
+            System.out.println("ILLEGAL");
+        }
 
 
         String result = testRunner.getResult();
