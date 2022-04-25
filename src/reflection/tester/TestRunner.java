@@ -38,26 +38,7 @@ public class TestRunner {
 
                 Class<? extends Throwable> expected = myTest.expected();
 
-
-                try {
-                    method.invoke(instance);
-                    if (expected.getSimpleName().equals("None")) {
-                        result.add(method.getName() + "() - OK");
-                    } else {
-                        result.add(method.getName() + "() - FAILED");
-                    }
-
-
-                } catch (Exception e) {
-                    Class<? extends Throwable> throwableCause = e.getCause().getClass();
-                    if (throwableCause == expected) {
-                        result.add(method.getName() + "() - OK");
-                    } else if (expected.isAssignableFrom(throwableCause)) {
-                        result.add(method.getName() + "() - OK");
-                    } else {
-                        result.add(method.getName() + "() - FAILED");
-                    }
-                }
+                writeTestResult(method, instance, expected);
 
             }
         }
@@ -65,6 +46,30 @@ public class TestRunner {
 
     public String getResult() {
         return String.join(",", result);
+    }
+
+    public void writeTestResult(Method method, Object instance, Class<? extends Throwable> expected) {
+
+        try {
+            method.invoke(instance);
+            if (expected.getSimpleName().equals("None")) {
+                result.add(method.getName() + "() - OK");
+            } else {
+                result.add(method.getName() + "() - FAILED");
+            }
+
+
+        } catch (Exception e) {
+            Class<? extends Throwable> throwableCause = e.getCause().getClass();
+            if (throwableCause == expected) {
+                result.add(method.getName() + "() - OK");
+            } else if (expected.isAssignableFrom(throwableCause)) {
+                result.add(method.getName() + "() - OK");
+            } else {
+                result.add(method.getName() + "() - FAILED");
+            }
+        }
+
     }
 
 }
