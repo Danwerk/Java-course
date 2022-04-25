@@ -31,6 +31,5 @@ public class TestRunnerTests {
 
         assertThat(result, not(containsString("helperMethod()")));
 
-
     }
 }

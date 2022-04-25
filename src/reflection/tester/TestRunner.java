@@ -33,8 +33,6 @@ public class TestRunner {
                     }
 
 
-//                    System.out.println("ok method" + method.getName());
-
                 } catch (Exception e) {
                     Class<? extends Throwable> throwableCause = e.getCause().getClass();
                     if (throwableCause == expected) {
@@ -48,68 +46,10 @@ public class TestRunner {
 
             }
         }
-//        System.out.println(result);
     }
 
     public String getResult() {
         return String.join(",", result);
     }
 
-
 }
-
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//    if (expected != null) {
-//            try {
-//
-//            method.invoke(instance);
-//
-//            } catch (Exception e) {
-//
-//
-//            Class<? extends Throwable> throwableCause = e.getCause().getClass();
-//
-//        if (expected == throwableCause) {
-//        result.add(method.getName() + "() - OK");
-//
-//        } else if (expected.isAssignableFrom(IllegalStateException.class)) {
-//        result.add(method.getName() + "() - OK");
-//        } else {
-//        result.add(method.getName() + "() - FAILED");
-//        }
-//
-//        }
-//
-//
-////                    Class<? extends Throwable> expected = cause.getClass();
-////                    if (IllegalStateException.class.isAssignableFrom(expected)) {
-////                        result.add(method.getName() + "() - OK");
-////                    } else {
-////                        result.add(method.getName() + "() - FAILED");
-////                    }
-//        } else {
-//        try {
-//        method.invoke(instance);
-//        result.add(method.getName() + "() - OK");
-//        } catch (Exception e) {
-//        result.add(method.getName() + "() - FAILED");
-//
-//        }
-//
-//        }
-//
-//        }
-//        }
-//        System.out.println(result);
-//        }
