@@ -22,7 +22,7 @@ Core Tests"
 * collections - EX07 - Kollektsioonid, sorteerimine, enum
 * generics - EX08 - geneerilised tüübid, silumine
 * fp - EX09 - funktsionaalne programmeerimine, anonüümsed funktsioonid, stream API
-* poly - EX10 - polümorfism
+* poly - EX10 - polümorfism (näited interface kasutamisest, dünaamiline meetodi valimine)
 * GOF - EX11 - Game of life, Java virtuaalmasin
 
 #Kirjandus lugemiseks:
