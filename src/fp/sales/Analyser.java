@@ -22,7 +22,10 @@ public class Analyser {
     }
 
     public Double getSalesBetween(LocalDate start, LocalDate end) {
-        return repository.getEntries().stream().filter(x -> x.getDate().isAfter(start) && x.getDate().isBefore(end)).mapToDouble(Entry::getAmount).sum();
+        return repository.getEntries()
+                .stream()
+                .filter(x -> x.getDate().isAfter(start) && x.getDate().isBefore(end))
+                .mapToDouble(Entry::getAmount).sum();
 
     }
 

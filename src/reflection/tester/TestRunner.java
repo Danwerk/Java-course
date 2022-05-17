@@ -31,26 +31,28 @@ public class TestRunner {
 
             for (Method method : clazz.getDeclaredMethods()) {
                 MyTest myTest = method.getAnnotation(MyTest.class);
+
                 if (myTest == null) {
                     continue;
                 }
 
 
                 Class<? extends Throwable> expected = myTest.expected();
-
                 writeTestResult(method, instance, expected);
 
             }
         }
     }
 
+
     public String getResult() {
         return String.join(",", result);
     }
 
-    public void writeTestResult(Method method, Object instance, Class<? extends Throwable> expected) {
 
+    public void writeTestResult(Method method, Object instance, Class<? extends Throwable> expected) {
         try {
+            System.out.println(expected.getSimpleName());
             method.invoke(instance);
             if (expected.getSimpleName().equals("None")) {
                 result.add(method.getName() + "() - OK");

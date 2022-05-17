@@ -28,6 +28,9 @@ public class SalesAnalyserTest {
 
     @Test
     public void calculatesTotalSalesWithFlatTaxRate() {
+        long x = 345234523764422432L;
+        long y = x;
+        System.out.println(y);
         FlatTaxSalesAnalyser analyser = new FlatTaxSalesAnalyser(records);
 
         assertThat(analyser.getTotalSales(), is(closeTo(295)));

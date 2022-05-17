@@ -20,13 +20,12 @@ public class DirectoryListPrinter {
 
     private DirectoryStream<Path> getDirectoryFileList(Path currentDirectory) {
         try {
-        return Files.newDirectoryStream(currentDirectory);
+            return Files.newDirectoryStream(currentDirectory);
 
-        }catch (IOException e) {
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
-
 
 
 }
