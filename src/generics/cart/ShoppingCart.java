@@ -15,9 +15,7 @@ public class ShoppingCart<T extends CartItem> {
     }
 
     public void removeById(String id) {
-        T
-
-                itemToRemove = null;
+        T itemToRemove = null;
         for (T item : cartItems) {
             if (item.getId().equals(id)) {
                 itemToRemove = item;

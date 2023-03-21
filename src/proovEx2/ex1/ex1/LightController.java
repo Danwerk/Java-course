@@ -7,8 +7,8 @@ public class LightController {
 
     private List<Light> lights = new ArrayList<>();
 
-    public void addLight(Object light) {
-        lights.add((Light) light);
+    public void addLight(Light light) {
+        lights.add(light);
 
     }
 

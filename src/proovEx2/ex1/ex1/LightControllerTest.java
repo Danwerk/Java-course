@@ -67,7 +67,7 @@ public class LightControllerTest {
         assertThat(fields.length, is(1));
 
         assertThat(fields[0].getGenericType().getTypeName(),
-                is("java.util.List<eksam.ex1.Light>"));
+                is("java.util.List<proovEx2.ex1.ex1.Light>"));
     }
 
     @Test

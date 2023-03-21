@@ -22,7 +22,7 @@ public class Exceptions {
         } catch (MyException2 e) {
             throw new MyException3(e);
         }
-        return result; // delete this
+        return result;
 
         // call this.readData() and return result. Should not use fileReader directly.
     }

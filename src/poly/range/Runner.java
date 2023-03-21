@@ -12,7 +12,7 @@ public class Runner {
     }
 
     private Iterable<Integer> range(int start, int end) {
-        return new MyIterable(start, end);
+        return () -> new myIterator(start, end);
     }
 
 
